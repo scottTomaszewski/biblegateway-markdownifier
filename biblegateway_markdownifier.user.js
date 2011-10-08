@@ -42,7 +42,7 @@ $(document).ready(function() {
     };
 
     // answer template
-    var markdownTemplate = "> **[{0}]({2})** ({1}) {3}";
+    var markdownTemplate = "> **[{0}]({2})** {1} {3}";
 
     var $textarea = $('<textarea rows="25" cols="80" class="markdown-export"></textarea>');
 
