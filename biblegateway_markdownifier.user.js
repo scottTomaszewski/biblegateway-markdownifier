@@ -70,11 +70,15 @@ $(document).ready(function() {
     text = text.replace(/<\/p>/gi, '');
     text = text.replace(/<\/?font[^>]*>/gi, '');
     text = text.replace(/<\/?span[^>]*>/gi, '');
-    // change &nbsp; before verse number to normal space
-    text = text.replace(/&nbsp;<sup>/gi, ' <sup>');
+    text = text.replace(/&nbsp;<sup>/gi, '<sup>');
+    text = text.replace(/  +/gi, ' ');
 
-    var lines = text.split('\n');
-    text = lines.join('  \n> ');
+	// remove frequent leading/trailing newlines from verse content
+	text = text.replace(/\s+$/, '');
+	text = text.replace(/^\s+/, '');
+
+	// use double space+newline for line breaks and block quote the whole thing
+    text = "  \n> " + text.split('\n').join('  \n> ');
 
     // generate the complete markdown
     var markdown = markdownTemplate.format(
