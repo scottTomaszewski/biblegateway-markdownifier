@@ -4,7 +4,7 @@
 // @description    Create copypasteable markdown from BibleGateway passages
 // @include        http://www.biblegateway.com/passage/*
 // @version        0.1.2
-// @author         Hannu Hartikainen
+// @author         Hannu Hartikainen, Caleb Maclennan
 // @license        MIT
 // ==/UserScript==
 
@@ -42,7 +42,7 @@ $(document).ready(function() {
     };
 
     // answer template
-    var markdownTemplate = "> [**{0} {1}**]({2}) {3}";
+    var markdownTemplate = "> **[{0}]({2})** ({1}) {3}";
 
     var $textarea = $('<textarea rows="25" cols="80" class="markdown-export"></textarea>');
 
