@@ -65,6 +65,7 @@ $(document).ready(function() {
     // remove some remaining tags, but keep text content
     var text = $text.html();
     text = text.replace(/<br *\/?>/gi, '\n');
+    text = text.replace(/<a href=[^<]*<\/a>/gi, '');
     text = text.replace(/<sup value=[^<]*<\/sup>/gi, '');
     text = text.replace(/<p><\/p>/gi, '');
     text = text.replace(/<p>/gi, '\n');
