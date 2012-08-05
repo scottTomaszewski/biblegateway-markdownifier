@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           BibleGateway markdownifier
-// @namespace      http://github.com/dancek
+// @namespace      http://github.com/alerque
 // @description    Create copypasteable markdown from BibleGateway passages
 // @include        http://www.biblegateway.com/passage/*
 // @version        0.1.2
@@ -65,6 +65,7 @@ $(document).ready(function() {
     // remove some remaining tags, but keep text content
     var text = $text.html();
     text = text.replace(/<br *\/?>/gi, '\n');
+    text = text.replace(/<sup value=[^<]*<\/sup>/gi, '');
     text = text.replace(/<p><\/p>/gi, '');
     text = text.replace(/<p>/gi, '\n');
     text = text.replace(/<\/p>/gi, '');
