@@ -67,8 +67,8 @@ $(document).ready(function() {
     text = text.replace(/<br *\/?>/gi, '\n');
     text = text.replace(/<a href=[^<]*<\/a>/gi, '');
     text = text.replace(/<sup value=[^<]*<\/sup>/gi, '');
-    text = text.replace(/<p[^>]*><\/p>/gi, '');
-    text = text.replace(/<p>/gi, '\n');
+    text = text.replace(/<p><\/p>/gi, '');
+    text = text.replace(/<p[^>]*>/gi, '\n');
     text = text.replace(/<\/p>/gi, '');
     text = text.replace(/<\/?font[^>]*>/gi, '');
     text = text.replace(/<\/?span[^>]*>/gi, '');
