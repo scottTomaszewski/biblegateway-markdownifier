@@ -3,7 +3,7 @@
 // @namespace      http://github.com/alerque
 // @description    Create copypasteable markdown from BibleGateway passages
 // @include        http://www.biblegateway.com/passage/*
-// @version        0.1.2
+// @version        0.1.3
 // @author         Hannu Hartikainen, Caleb Maclennan
 // @license        MIT
 // ==/UserScript==
