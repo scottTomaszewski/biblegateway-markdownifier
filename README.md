@@ -11,7 +11,8 @@ The markdown produced will follow this structure
 ```
 > **[Romans 8:1-2](https://www.biblegateway.com/passage/?search=romans+8%3A1-2&version=NIV)** (NIV)
 >   
-> 8&nbsp;Therefore, there is now no condemnation for those who are in Christ Jesus, <sup>**2**</sup> because through Christ Jesus the law of the Spirit who gives life has set you free from the law of sin and death.
+> 8&nbsp;Therefore, there is now no condemnation for those who are in Christ Jesus, <sup>**2**</sup> because 
+through Christ Jesus the law of the Spirit who gives life has set you free from the law of sin and death.
 ```
 
 and it will render like this
