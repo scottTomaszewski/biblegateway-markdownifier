@@ -22,6 +22,6 @@ and it will render like this
 ## Installation instructions
 
 1. Add tampermonkey to your web browser to run the userscript
-1. Open the (js file in raw mode)[https://github.com/scottTomaszewski/biblegateway-markdownifier/raw/master/biblegateway_markdownifier.user.js]
+1. Open the [js file in raw mode](https://github.com/scottTomaszewski/biblegateway-markdownifier/raw/master/biblegateway_markdownifier.user.js)
 
 The tampermonkey should pick it up and ask you to install it.  Alternatively, you can just copy the userscript into tampermonkey directly. 
