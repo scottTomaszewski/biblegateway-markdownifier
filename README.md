@@ -25,3 +25,7 @@ and it will render like this
 1. Open the [js file in raw mode](https://github.com/scottTomaszewski/biblegateway-markdownifier/raw/master/biblegateway_markdownifier.user.js)
 
 The tampermonkey should pick it up and ask you to install it.  Alternatively, you can just copy the userscript into tampermonkey directly. 
+
+## Credit and Thanks
+
+I didn't write the first iteration of this script, I just modified it to support the new BibleGateway layout.  Original credit goes to [alerque](https://github.com/alerque) and [dancek](https://github.com/dancek).  Thanks guys for getting this started.
