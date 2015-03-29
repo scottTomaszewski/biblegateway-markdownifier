@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         My Fancy New Userscript
+// @name         biblegateway-markdownifier
 // @namespace    https://github.com/scottTomaszewski/
 // @version      0.0.1
 // @description  Create copy-pasteable markdown from BibleGateway passages
