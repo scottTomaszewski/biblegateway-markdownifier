@@ -1,14 +1,4 @@
 // ==UserScript==
-// @name           BibleGateway markdownifier
-// @namespace      https://github.com/scottTomaszewski/
-// @description    Create copypasteable markdown from BibleGateway passages
-// @include        http://www.biblegateway.com/passage/*
-// @version        0.1.3
-// @author         Hannu Hartikainen, Caleb Maclennan
-// @license        MIT
-// ==/UserScript==
-
-// ==UserScript==
 // @name         My Fancy New Userscript
 // @namespace    https://github.com/scottTomaszewski/
 // @version      0.0.1
