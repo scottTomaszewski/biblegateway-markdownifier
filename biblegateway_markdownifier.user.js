@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         biblegateway-markdownifier
 // @namespace    https://github.com/scottTomaszewski/
-// @version      0.0.1
+// @version      0.0.2
 // @description  Create copy-pasteable markdown from BibleGateway passages
 // @author       Hannu Hartikainen, Caleb Maclennan, Scott Tomaszewski
 // @match        http*://www.biblegateway.com/passage/*
@@ -55,10 +55,11 @@ $(document).ready(function() {
     var $text = $("div.result-text-style-normal").clone();
 
     // remove unnecessary stuff
-    $.each(['div', 'sup.xref', 'sup.footnote', 'h1', 'h2', 'h3', 'h4', 'h5'],
+    $.each(['div.crossrefs', 'sup.xref', 'sup.footnote', 'h1', 'h2', 'h3', 'h4', 'h5', 'ol'],
             function(i, matcher) {
         $text.find(matcher).remove();
     });
+    
     $text.find('sup').removeAttr('class').removeAttr('id').after(' ');
     $text.contents().filter(function() {
         return this.nodeType == 8;
@@ -70,6 +71,8 @@ $(document).ready(function() {
     text = text.replace(/<a href=[^<]*<\/a>/gi, '');
     text = text.replace(/<sup value=[^<]*<\/sup>/gi, '');
     text = text.replace(/<sup data-link=[^<]*<\/sup>/gi, '');
+    text = text.replace(/<div[^>]*>/gi, '');
+    text = text.replace(/<\/div>/gi, '');
     text = text.replace(/<p><\/p>/gi, '');
     text = text.replace(/<p[^>]*>/gi, '\n');
     text = text.replace(/<\/p>/gi, '');
