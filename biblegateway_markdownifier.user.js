@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         biblegateway-markdownifier
 // @namespace    https://github.com/scottTomaszewski/
-// @version      0.0.2
+// @version      0.0.3
 // @description  Create copy-pasteable markdown from BibleGateway passages
 // @author       Hannu Hartikainen, Caleb Maclennan, Scott Tomaszewski
 // @match        http*://www.biblegateway.com/passage/*
@@ -81,14 +81,15 @@ $(document).ready(function() {
     text = text.replace(/&nbsp;<sup>/gi, '<sup>');
     text = text.replace(/<sup>/gi, '<sup>**');
     text = text.replace(/&nbsp;<\/sup>/gi, '**<\/sup>');
-    text = text.replace(/  +/gi, ' ');
+    text = text.replace(/ +/gi, ' ');
+    text = text.replace(/ *\n/gi, '\n');
 
     // remove frequent leading/trailing newlines from verse content
     text = text.replace(/\s+$/, '');
     text = text.replace(/^\s+/, '');
 
     // use double space+newline for line breaks and block quote the whole thing
-    text = "  \n> " + text.split('\n').join('  \n> ');
+    text = "  \n> " + text.split('\n').join('<br />\n> ');
 
     // generate the complete markdown
     var markdown = markdownTemplate.format(
